@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import Editor from "@monaco-editor/react";
 import oceanicNext from 'monaco-themes/themes/Oceanic Next.json'
@@ -29,7 +29,10 @@ import CodeBlock from '../components/CodeBlock'
 
 import data from '../data'
 import { defineTheme } from '../plugins/theme';
-import { useState } from 'react';
+import SEO from '../components/SEO';
+
+
+
 const Index = () => {
 
   const [markdownText, setMarkdownText] = React.useState(data.data)
@@ -48,7 +51,7 @@ const Index = () => {
 
   return (
 
-    <>
+    <><SEO/>
       <h1 style={{ textAlign: "center" }}>Markdown Previewer</h1>
       <div
         style={{

@@ -3,7 +3,7 @@
 - This app convert `markdown` to `html` & logic can be used to render `blogs` written in `markdown`.
 - Project support `custom component` by modifying default sanitizing schema of `rehypeSanitize`.
 
-![Untitled](https://raw.githubusercontent.com/akash-aman/markdown_previewer/main/images/img2.png)
+![Untitled](https://raw.githubusercontent.com/akash-aman/markdown_previewer/main/images/img1.png)
 
 ## **Idea about building this Project**
 
@@ -35,6 +35,9 @@
 
 ## Image
 
+
+![Untitled](https://raw.githubusercontent.com/akash-aman/markdown_previewer/main/images/img2.png)
+
 ![Untitled](https://raw.githubusercontent.com/akash-aman/markdown_previewer/main/images/img3.png)
 
-![Untitled](https://raw.githubusercontent.com/akash-aman/markdown_previewer/main/images/img1.png)
+
