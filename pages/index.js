@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
+import Editor from "@monaco-editor/react";
+import oceanicNext from 'monaco-themes/themes/Oceanic Next.json'
 //------------------------------------------------------------------------
 // Added necessary plugins : 
 //  - remarkGfm for github markdown flavour
@@ -24,7 +26,10 @@ import rehypeSanitize from '../plugins/rehypeSanitize'
 //--------------------------------------------------------- 
 import MultiCode from '../components/MultiCode'
 import CodeBlock from '../components/CodeBlock'
+
 import data from '../data'
+import { defineTheme } from '../plugins/theme';
+import { useState } from 'react';
 const Index = () => {
 
   const [markdownText, setMarkdownText] = React.useState(data.data)
@@ -32,6 +37,14 @@ const Index = () => {
     multicode: MultiCode,
     code: CodeBlock
   }
+
+  const [theme, setTheme] = useState()
+
+  useEffect(() => {
+    defineTheme("oceanic-next").then((_) =>
+      setTheme({ value: "oceanic-next", label: "Oceanic Next" })
+    );
+  }, []);
 
   return (
 
@@ -44,7 +57,21 @@ const Index = () => {
           margin: "0 2rem 0 2rem",
         }}
       >
-        <textarea
+        <div className="textarea">
+          <Editor
+            height="85vh"
+            width={`100%`}
+
+            
+            spellCheck="false"
+            language={"markdown"}
+            value={markdownText}
+            theme={"oceanic-next"}
+            defaultValue="// some comment"
+            onChange={(e) => e ? setMarkdownText(e) : null}
+          />
+        </div>
+        {/* <textarea
           value={markdownText}
           spellCheck="false"
           className='textarea'
@@ -63,7 +90,7 @@ const Index = () => {
               e.target.setSelectionRange(curser + 1, curser + 1)
             }
           }}
-        />
+        /> */}
         <div className='render'>
           <ReactMarkdown
 

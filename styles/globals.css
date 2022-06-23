@@ -213,9 +213,7 @@
   text-rendering: auto;
 }
 
-* {
-  font-family: "MyWebFont", sans-serif;
-}
+
 
 
 a {
@@ -1403,24 +1401,6 @@ img{
   width: 50vw;
 }
 
-.textarea{
-  background-color: rgba(195, 195, 195, 0.215);
-  border: none;
-  border-radius: 0.4rem;
-  padding: 1.1rem 0.5rem 0.5rem 2rem;
-  color: hsla(210, 14%, 89%, 1);
-  scroll-behavior: auto;  
-  min-height: 85vh;
-  max-height: 85vh;
-  max-width: 43vw;
-  min-width: 40vw;
-  overflow: scroll;
-    -ms-overflow-style: none;
-      /* IE and Edge */
-      scrollbar-width: none;
-      font-family: "MyCodeFont";
-
-}
 .render{
   padding: 1.1rem 0.5rem 0.5rem 2rem;
   scroll-behavior: auto;
@@ -1441,6 +1421,7 @@ body{
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-family: 'MyWebFont';
 }
 
 code {
@@ -1470,12 +1451,13 @@ blockquote {
  /* Hide scrollbar for Chrome, Safari and Opera */
  .render::-webkit-scrollbar {
    display: none;
+   background-color: transparent;
  }
 
  /* Hide scrollbar for IE, Edge and Firefox */
 
-.textarea::-webkit-scrollbar {
-  display: none;
+.textarea{
+  border-radius: 2rem;
 }
 
 pre span{
@@ -1492,4 +1474,9 @@ pre span{
 
 .katex-mathml{
   display: none;
+}
+
+
+.monaco-mouse-cursor-text{
+  font-family: 'MyCodeFont'!important;
 }
