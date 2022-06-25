@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import Editor from "@monaco-editor/react";
 import oceanicNext from 'monaco-themes/themes/Oceanic Next.json'
@@ -51,7 +51,7 @@ const Index = () => {
 
   return (
 
-    <><SEO/>
+    <><SEO />
       <h1 style={{ textAlign: "center" }}>Markdown Previewer</h1>
       <div
         style={{
@@ -65,7 +65,7 @@ const Index = () => {
             height="85vh"
             width={`100%`}
 
-            
+
             spellCheck="false"
             language={"markdown"}
             value={markdownText}
@@ -74,26 +74,6 @@ const Index = () => {
             onChange={(e) => e ? setMarkdownText(e) : null}
           />
         </div>
-        {/* <textarea
-          value={markdownText}
-          spellCheck="false"
-          className='textarea'
-          onChange={(e) => {
-
-            setMarkdownText(e.target.value)
-          }}
-
-          // only for Tab
-          onKeyDown={(e) => {
-            if (e.code == "Tab") {
-              e.preventDefault()
-              const curser = e.target.selectionStart + 1;
-              e.target.value = e.target.value.slice(0, e.target.selectionStart) +
-                '  ' + e.target.value.slice(e.target.selectionStart);
-              e.target.setSelectionRange(curser + 1, curser + 1)
-            }
-          }}
-        /> */}
         <div className='render'>
           <ReactMarkdown
 
