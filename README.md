@@ -52,24 +52,20 @@ docker-compose -f .\docker-compose.prod.yml down
 ```
 
 
-## How to run 
+## How to run this app
 
-- Installing pnpm 
+- Installing npm dependencies
 ```
-    npm install -g pnpm
-```
-- Installing pnpm dependencies
-```
-    pnpm install 
+    npm install 
 ```
 - Run in Development Mode  
 ```
-    pnpm run dev
+    npm run dev
 ```
 - Run in Production Mode 
 ```
-    pnpm run build
-    pnpm run start
+    npm run build
+    npm run start
 ```
 
 ## Image
