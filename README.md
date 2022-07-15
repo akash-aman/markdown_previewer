@@ -13,6 +13,45 @@
 - features like fully custom component, math ➗ equations support, mermaid code to diagram 💎 support were missing due to security issues. 
 - I have tried to implement all features 🎉. and also sanatized🔫 converted html before render.
 
+
+## Run with Docker Compose
+
+- First Create my_network  
+
+```
+docker network create my_network
+```
+
+
+### Development build with docker compose
+
+- Run Container 
+
+```
+docker-compose -f .\docker-compose.dev.yml up -d
+```
+
+- Stop Container
+
+```
+docker-compose -f .\docker-compose.dev.yml down
+```
+
+### Production build with docker compose 
+
+- Run Container 
+
+```
+docker-compose -f .\docker-compose.prod.yml up -d
+```
+
+- Stop Container
+
+```
+docker-compose -f .\docker-compose.prod.yml down
+```
+
+
 ## How to run 
 
 - Installing pnpm 

@@ -27,7 +27,7 @@ import rehypeSanitize from '../plugins/rehypeSanitize'
 import MultiCode from '../components/MultiCode'
 import CodeBlock from '../components/CodeBlock'
 
-import data from '../data'
+import data from '../data/data'
 import { defineTheme } from '../plugins/theme';
 import SEO from '../components/SEO';
 
